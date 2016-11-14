@@ -57,6 +57,8 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -120,6 +122,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611140658394_firstmigrationfromdb.cs" />
+    <Compile Include="Migrations\201611140658394_firstmigrationfromdb.Designer.cs">
+      <DependentUpon>201611140658394_firstmigrationfromdb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\MyContext.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Order_Detail.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Shipper.cs" />
+    <Compile Include="Models\Supplier.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -135,7 +151,11 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201611140658394_firstmigrationfromdb.resx">
+      <DependentUpon>201611140658394_firstmigrationfromdb.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
