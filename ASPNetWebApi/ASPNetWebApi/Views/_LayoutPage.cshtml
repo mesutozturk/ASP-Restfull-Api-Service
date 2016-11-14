@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="~/Content/site.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.1.1.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/app.js"></script>
+</head>
+<body ng-app="north">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                Banner
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                Menü
+            </div>
+        </div>
+
+        @RenderBody()
+
+        <div class="row">
+            <div class="col-md-12">
+                Footer
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -24,10 +24,10 @@ namespace ASPNetWebApi
             );
             config.Formatters.Clear();
             config.Formatters.Add(new JsonMediaTypeFormatter());
-            config.Formatters.JsonFormatter.SerializerSettings = new JsonSerializerSettings()
-            {
-                 ContractResolver=new CamelCasePropertyNamesContractResolver()
-            };
+            //config.Formatters.JsonFormatter.SerializerSettings = new JsonSerializerSettings()
+            //{
+            //     ContractResolver=new CamelCasePropertyNamesContractResolver()
+            //};
         }
     }
 }

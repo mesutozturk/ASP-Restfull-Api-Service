@@ -37,5 +37,31 @@ namespace ASPNetWebApi.Controllers
             };
             return model;
         }
+        public object Post([FromBody]CategoryViewModel value)
+        {
+            MyContext db = new MyContext();
+            try
+            {
+                db.Categories.Add(new Category()
+                {
+                     CategoryName=value.CategoryName,
+                      Description=value.Description
+                });
+                db.SaveChanges();
+                return new
+                {
+                    success=true,
+                    message="Kategori ekleme işlemi başarılı"
+                };
+            }
+            catch (Exception ex)
+            {
+                return new
+                {
+                    success = false,
+                    message = $"Kategori ekleme işlemi başarısız. {ex.Message}"
+                };
+            }
+        }
     }
 }
