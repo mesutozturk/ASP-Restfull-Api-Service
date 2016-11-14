@@ -12,20 +12,21 @@
         </ul>
     </div>
     <div class="col-sm-6">
-        <form>
-            <div class="form-group">
-                <label for="kategoriid">Kategori ID</label>
-                <input type="text" class="form-control" id="kategoriid" disabled ng-model="category.CategoryID">
-            </div>
-            <div class="form-group">
-                <label for="kategoriadi">Kategori Adı</label>
-                <input type="text" class="form-control" id="kategoriadi" ng-model="category.CategoryName">
-            </div>
-            <div class="form-group">
-                <label for="kategoriaciklama">Açıklama</label>
-                <input type="text" class="form-control" id="kategoriaciklama" ng-model="category.Description">
-            </div>
-            <button type="submit" class="btn btn-default">Güncelle</button>
-        </form>
+        <div class="form-group">
+            <label for="kategoriid">Kategori ID</label>
+            <input type="text" class="form-control" id="kategoriid" disabled ng-model="category.CategoryID">
+        </div>
+        <div class="form-group">
+            <label for="kategoriadi">Kategori Adı</label>
+            <input type="text" class="form-control" id="kategoriadi" ng-model="category.CategoryName">
+        </div>
+        <div class="form-group">
+            <label for="kategoriaciklama">Açıklama</label>
+            <input type="text" class="form-control" id="kategoriaciklama" ng-model="category.Description">
+        </div>
+        <button type="button" class="btn btn-success" ng-click="guncelle()">Güncelle</button>
+        <button type="button" class="btn btn-info" ng-click="ekle()">Ekle</button>
+        <button type="button" class="btn btn-danger" ng-click="sil()">Sil</button>
+
     </div>
 </div>

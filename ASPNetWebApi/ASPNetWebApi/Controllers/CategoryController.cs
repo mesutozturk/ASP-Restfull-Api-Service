@@ -63,5 +63,48 @@ namespace ASPNetWebApi.Controllers
                 };
             }
         }
+        public object Put([FromBody]CategoryViewModel value)
+        {
+            MyContext db = new MyContext();
+            try
+            {
+                var kategori = db.Categories.Find(value.CategoryID);
+                kategori.CategoryName = value.CategoryName;
+                kategori.Description = value.Description;
+                db.SaveChanges();
+                return new
+                {
+                    success = true,
+                    message = "Kategori güncelleme işlemi başarılı"
+                };
+            }
+            catch (Exception ex)
+            {
+                return new
+                {
+                    success = false,
+                    message = $"Kategori güncelleme işlemi başarısız. {ex.Message}"
+                };
+            }
+        }
+
+        public string Delete(int id)
+        {
+            MyContext db = new MyContext();
+            try
+            {
+                var kategori= db.Categories.Find(id);
+                if (kategori == null)
+                    throw new Exception("Silinecek Kategori Bulunamadı");
+                db.Categories.Remove(kategori);
+                db.SaveChanges();
+                return $"{kategori.CategoryName} isimli kategori silinmiştir";
+            }
+            catch (Exception ex)
+            {
+                return $"Kategori silme işleminde hata: {ex.Message}";
+            }
+            
+        }
     }
 }

@@ -4,13 +4,18 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    <link href="~/Content/bootstrap.css" rel="stylesheet" />
-    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
-    <link href="~/Content/site.css" rel="stylesheet" />
-    <script src="~/Scripts/jquery-3.1.1.js"></script>
-    <script src="~/Scripts/bootstrap.js"></script>
+    @*<link href="~/Content/bootstrap.css" rel="stylesheet" />
+        <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+        <link href="~/Content/site.css" rel="stylesheet" />*@
+    @*<script src="~/Scripts/jquery-3.1.1.js"></script>
+        <script src="~/Scripts/bootstrap.js"></script>
+        <script src="~/Scripts/angular.js"></script>
+        <script src="~/Scripts/app.js"></script>*@
+    @System.Web.Optimization.Styles.Render("~/bundle/css")
+    @System.Web.Optimization.Scripts.Render("~/bundle/jquery")
     <script src="~/Scripts/angular.js"></script>
     <script src="~/Scripts/app.js"></script>
+
 </head>
 <body ng-app="north">
     <div class="container">
