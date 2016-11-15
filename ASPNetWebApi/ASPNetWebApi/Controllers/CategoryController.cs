@@ -87,7 +87,6 @@ namespace ASPNetWebApi.Controllers
                 };
             }
         }
-
         public string Delete(int id)
         {
             MyContext db = new MyContext();
